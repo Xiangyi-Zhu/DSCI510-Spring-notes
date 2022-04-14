@@ -17,10 +17,23 @@ like a nice pipe, send data across computers and get data from it
 2.4 Application Layer (HTTP: hypertext transfer protocol)
 
 3. TCP connections / Sockets
-endpoint of communication pipe, follows some protocals 
+endpoint of communication pipe, follows some protocols 
+what do we want to do with the socket? -- application protocols: mail, world wide web, secure login
 
 4. TCP Port Numbers
 a number allows you to differentiate the types of data (web pages from broswer, email, 
 vedios from zoom...) you wanna transmit 
 HTTP: 80
 HTTPS: 443
+
+5. Most common application protocal, HTTP (hypertext transfer protocol)
+a set of rules to allow browsers to retrieve web documents from servers
+
+6. Get data from server
+click on an anchor tag with href= value to switch to a new page, browser makes a connection to 
+the remote web server and issues a GET request (get content of that specific URL), server returns the 
+HTML document to the browser
+
+7. We can make a HTTP request and http is a protocol
+
+8. 
