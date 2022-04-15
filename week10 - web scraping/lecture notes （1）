@@ -1,20 +1,24 @@
+This lecture focuses on web scraping, how you can get data from web pages on the web
 1. Internet in a nutshell
 1.1 Internet is a network of networks
 1.2 Each computer has an address, called IP (Internet Protocol) address (IPv4 IPv6)
-1.3 Domain Name System (DNS) (was invented at ISI) (IP address are numbers which may be obsure to work with):
-you normally look at when you go to the web
+1.3 Domain Name System (DNS) (was invented at ISI USC) (IP address are numbers which may be obsure to work with):
+you normally look at Domain Name when you go to the web
 Map IP address to nice hierarchical names.
 1.4 The whole idea of Internet in a word:
 Transmit some data from computerA to computerB (Host A / B)
+Info was divided into different packets (small pieces) and every packet of your file may take a different route to
+the Internet (routing protocol)
+Packets have signed with destination (IP address)
 
 2. Internet: Layered Architecture
 From the bottom:
-2.1 Link Layer (WiFI)
-2.2 Network Layer (IP)
-2.3 Transport Layer (TCP: transport control protocol)
+2.1 Link Layer (WiFI / routers)
+2.2 Network Layer (IP) (sending packets around and finding routing protocol)
+2.3 Transport Layer (TCP: transport control protocol) (guarantee reliable transfer)
 assume IP might lose data, TCP will make sure to store the data
 like a nice pipe, send data across computers and get data from it
-2.4 Application Layer (HTTP: hypertext transfer protocol)
+2.4 Application Layer (HTTP: hypertext transfer protocol, Telnet...)
 
 3. TCP connections / Sockets
 endpoint of communication pipe, follows some protocols 
@@ -26,8 +30,9 @@ vedios from zoom...) you wanna transmit
 HTTP: 80
 HTTPS: 443
 
-5. Most common application protocal, HTTP (hypertext transfer protocol)
+5. Most common application protocol, HTTP (hypertext transfer protocol)
 a set of rules to allow browsers to retrieve web documents from servers
+(protocol)://(host)/(document in this computer): http://www.dr-chuck.com/page1.htm
 
 6. Get data from server
 click on an anchor tag with href= value to switch to a new page, browser makes a connection to 
