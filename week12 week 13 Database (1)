@@ -1,0 +1,31 @@
+1. Why database?
+When you have lots of data, too much to store in main memory, you need to organize your data and be able to 
+find what you need quickly.
+
+2. Database Management System (DBMS):
+Collection of programs that manage the database structure, store things on disk, evaluate queries efficiently...
+
+3. DBMS interacts between end users and database
+you have data stored at hard drive (storage),  DBMS interacts with the drives and allows end users to query data
+
+4. There are different levels of storage in your computer:
+main memory (RAM:random access memory) 
+hard drive / solid state drive...
+Those have different latencies, different speed of access
+
+5. There are a number of databases, the one  we look at in this lecture is relational databases (tables)
+You can retrieve data and relate multiple tables and query them at the same time.
+
+6. Terminology:
+Database: contains many tables
+Relation (or table): contains tuples and attributes
+Tuple (row): a set of fields that represent an object (entity), like a person or track
+Attribute (column or field): some aspects of entities
+
+7. SQL:
+create data (insert)
+retrieve data
+updata data
+delete data
+
+8. Some SQL languages:
