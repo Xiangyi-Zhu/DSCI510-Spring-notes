@@ -50,4 +50,14 @@ cur = conn.cursor() #create cursor object
 cur.execute('DROP TABLE IF EXISTS Counts') #execute is a method of cursor object
 
 
-10. 
+10. Database Normalization
+Use integers for keys and for references.
+Add a special “key” column to each table which we will make references to. By convention, many programmers
+call this column “id”
+
+11. Three kind of keys
+
+
+
+
+
