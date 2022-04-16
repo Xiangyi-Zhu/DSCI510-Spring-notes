@@ -29,3 +29,25 @@ updata data
 delete data
 
 8. Some SQL languages:
+SQLite Browser is used: (https://sqlitebrowser.org/)
+can be found at https://www.py4e.com/lectures3/Pythonlearn-15-Database-Handout.txt
+CREATE TABLE "Users" ("name" TEXT, "email" TEXT)
+INSERT INTO Users (name, email) VALUES ('Chuck', 'csev@umich.edu')
+DELETE FROM Users WHERE email='ted@umich.edu'
+UPDATE Users SET name="Charles" WHERE email='csev@umich.edu'
+SELECT * FROM Users
+SELECT * FROM Users WHERE email='csev@umich.edu'
+SELECT * FROM Users ORDER BY email
+SELECT * FROM Users ORDER BY name DESC
+
+9. Create Database in Python (see jupyter notebook used in class):
+import import sqlite3 
+conn = sqlite3.connect('emaildb.sqlite')  # emaildb.sqlite is a filename
+cur = conn.cursor() #create cursor object
+#cursor a concept in databases that allows you to iterate over results 
+#and send queries and interact with database.
+
+cur.execute('DROP TABLE IF EXISTS Counts') #execute is a method of cursor object
+
+
+10. 
