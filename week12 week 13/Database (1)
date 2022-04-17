@@ -56,8 +56,30 @@ Add a special “key” column to each table which we will make references to. B
 call this column “id”
 
 11. Three kind of keys
+key is used to identify a single entity. 
+logical key makes semantic sence: the outside world uses for lookup (like the real name of sth)
+primary key: an integar auto-increment field
+Foreign key - generally an integer key pointing to a row in another table
 
+12. Abbreviations when editing table 
+No: NOT NULL
+PK: Primary Key
+AI: Auto-incremented
+U: Unique values
 
+Samples:
+CREATE TABLE Genre (
+id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+name TEXT
+)
 
+13. Declaring a foreign key: Database will enforce that foreign key corresponds to a valid id in its original table
+CREATE TABLE Track (
+id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE,
+title TEXT, rating INTEGER, len INTEGER, count INTEGER,
+album_id INTEGER,
+genre_id INTEGER,
+FOREIGN KEY(album_id) REFERENCES Album(id),
+FOREIGN KEY(genre_id) REFERENCES Genre(id))
 
 
