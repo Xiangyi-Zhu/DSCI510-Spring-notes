@@ -41,7 +41,7 @@ SELECT * FROM Users ORDER BY email
 SELECT * FROM Users ORDER BY name DESC
 
 9. Create Database in Python (see jupyter notebook used in class):
-import import sqlite3 
+import sqlite3 
 conn = sqlite3.connect('emaildb.sqlite')  # emaildb.sqlite is a filename
 cur = conn.cursor() #create cursor object
 #cursor a concept in databases that allows you to iterate over results 
