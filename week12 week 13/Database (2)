@@ -1,1 +1,99 @@
 1. Relate Data Across Tables Using Join
+SELECT Album.title, Artist.name FROM Album JOIN Artist ON Album.artist_id = Artist.id
+
+Alternative Notations for Joins
+SELECT Track.title, Artist.name, Album.title, Genre.name
+FROM Track, Genre, Album, Artist
+WHERE Track.genre_id = Genre.id and
+Track.album_id = Album.id and
+Album.artist_id = Artist.id
+
+
+2. Question? 
+(I wanna join two tables based on foreign key, but I did not get the whole rows)
+
+import sqlite3
+
+def sample_data():
+    conn = sqlite3.connect('DSCI510.db')
+    
+    cur = conn.cursor()
+    cur.execute('DROP TABLE IF EXISTS employees')
+    cur.execute('DROP TABLE IF EXISTS departments')
+    
+    cur.execute('''CREATE TABLE employees (
+    employee_id INTEGER PRIMARY KEY,
+    name TEXT,
+    email TEXT,
+    phone_number TEXT,
+    department_id INTEGER,
+    FOREIGN KEY(department_id) REFERENCES departments(department_id))''')
+    cur.execute('''CREATE TABLE departments (
+    department_id INTEGER PRIMARY KEY,
+    department_name TEXT,
+    location TEXT,
+    budget REAL)''')
+    
+    cur.execute('''INSERT INTO employees (employee_id, name, email, phone_number, department_id)
+    VALUES (1, 'Viraj', 'vkmehta@usc.edu', '3104567890', 510)''')
+    cur.execute('''INSERT INTO employees (employee_id, name, email, phone_number, department_id)
+    VALUES (2, 'Vishal', 'karanam@usc.edu', '9876543210', 510)''')
+    cur.execute('''INSERT INTO employees (employee_id, name, email, phone_number, department_id)
+    VALUES (3, 'Sanjana', 'svasired@usc.edu', '3107623421', 533)''')
+    cur.execute('''INSERT INTO employees (employee_id, name, email, phone_number, department_id)
+    VALUES (4, 'Swarnita', 'swarnita@usc.edu', '2526441314', 533)''')
+    cur.execute('''INSERT INTO employees (employee_id, name, email, phone_number, department_id)
+    VALUES (5, 'Joe', 'joe@usc.edu', '3106441777', 444)''')
+    cur.execute('''INSERT INTO departments (department_id, department_name, location, budget)
+    VALUES (510, 'Sales', 'San Francisco', 2000000)''')
+    cur.execute('''INSERT INTO departments (department_id, department_name, location, budget)
+    VALUES (553, 'Marketing', 'Los Angeles', 1000000)''')
+    cur.execute('''INSERT INTO departments (department_id, department_name, location, budget)
+    VALUES (444, 'Engineering', 'Los Angeles', 3000000)''')
+    conn.commit()
+    cur.execute('''SELECT * FROM employees''')
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+    cur.execute('''SELECT * FROM departments''')
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+  
+cur.execute('''SELECT employees.employee_id, employees.name, employees.email, employees.phone_number, employees.department_id, 
+     departments.department_name, departments.location, departments.budget FROM employees JOIN departments ON employees.department_id = departments.department_id''')
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+cur.execute('''SELECT employees.employee_id, employees.name, employees.email, employees.phone_number, employees.department_id, 
+     departments.department_name, departments.location, departments.budget FROM departments, employees where departments.department_id = employees.department_id''')
+    rows = cur.fetchall()  
+#cur.execute('''SELECT * FROM employees;''')
+    #rows_employees = cur.fetchall()
+    #return (list(rows_employees))
+#Output:
+(1, 'Viraj', 'vkmehta@usc.edu', '3104567890', 510)
+(2, 'Vishal', 'karanam@usc.edu', '9876543210', 510)
+(3, 'Sanjana', 'svasired@usc.edu', '3107623421', 533)
+(4, 'Swarnita', 'swarnita@usc.edu', '2526441314', 533)
+(5, 'Joe', 'joe@usc.edu', '3106441777', 444)
+(444, 'Engineering', 'Los Angeles', 3000000.0)
+(510, 'Sales', 'San Francisco', 2000000.0)
+(553, 'Marketing', 'Los Angeles', 1000000.0)
+(1, 'Viraj', 'vkmehta@usc.edu', '3104567890', 510, 'Sales', 'San Francisco', 2000000.0)
+(2, 'Vishal', 'karanam@usc.edu', '9876543210', 510, 'Sales', 'San Francisco', 2000000.0)
+(5, 'Joe', 'joe@usc.edu', '3106441777', 444, 'Engineering', 'Los Angeles', 3000000.0)
+(1, 'Viraj', 'vkmehta@usc.edu', '3104567890', 510, 'Sales', 'San Francisco', 2000000.0)
+(2, 'Vishal', 'karanam@usc.edu', '9876543210', 510, 'Sales', 'San Francisco', 2000000.0)
+(5, 'Joe', 'joe@usc.edu', '3106441777', 444, 'Engineering', 'Los Angeles', 3000000.0)
+
+
+3. Many to Many Relationship
+SELECT User.name, Member.role, Course.title
+FROM User JOIN Member JOIN Course
+ON Member.user_id = User.id AND
+Member.course_id = Course.id
+ORDER BY Course.title, Member.role DESC, User.name
+
+
+
