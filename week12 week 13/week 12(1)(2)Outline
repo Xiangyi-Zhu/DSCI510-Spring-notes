@@ -1,0 +1,7 @@
+Overview:
+(1) Introduce the basic concepts and terminologies of relational database
+(2) how to use sqlite browser to build your own database
+(3) how to use sqlite3 in python 
+(4) how to use sql language to do a query
+(5) three kind of keys
+(6) join multiple tables and do a query
