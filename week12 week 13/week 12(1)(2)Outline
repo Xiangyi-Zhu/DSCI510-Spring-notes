@@ -5,3 +5,10 @@ Overview:
 (4) how to use sql language to do a query
 (5) three kind of keys
 (6) join multiple tables and do a query
+
+Funny: (Count)
+Note the different results of these two queries:
+SELECT name, count(email) FROM Users;
+#return 1 row
+SELECT name, count(email) FROM Users GROUP BY email;
+#return the number of rows of grouped by email, the name column can not show the whole names of DB
