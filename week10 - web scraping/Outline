@@ -1,1 +1,6 @@
-
+(1) Introduce the basic concept of web and Layered Architecture
+(2) Introduce bit and byte and encoding method and ASCII
+(3) using primitive ways to retrieve data from webpages and communicate with web servers:
+import socket
+import urllib.request, urllib.parse, urllib.error
+(4) Introduce html and CSS
