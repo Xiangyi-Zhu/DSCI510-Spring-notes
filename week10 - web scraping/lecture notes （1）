@@ -65,5 +65,24 @@ the character set so it is properly represented in Python 3 as a string
 • A byte is a unit of digital information with 8 bits.
 • It can represent 2⁸ = 256 different values.
 
-12. 
+12. Reading Web Pages
+import socket
+import urllib.request, urllib.parse, urllib.error
 
+13. W3C Standards: HTML & CSS
+W3C is the community to identify the web standard
+HTML is (Hypertext Markup Language): language for describing structure of Web pages
+• Publish online documents with headings, text, tables, lists, photos, etc.
+• Retrieve online information via hypertext links, at the click of a button.
+• Design forms for conducting transactions with remote services, for use in searching for
+information, making reservations, ordering products, etc.
+• Include spread-sheets, video, sound clips, and other applications in their documents.
+• With HTML, authors describe the structure of pages using markup. The elements of the
+language label pieces of content such as “paragraph,” “list,” “table,” and so on.
+
+CSS (Cascading Style Sheets): language for describing the presentation of Web
+pages, including colors, layout, and fonts.
+• Can adapt presentation to different devices: large screens, small screens, printers.
+• Separation of HTML from CSS makes it easier to maintain sites, share style sheets
+
+for more info: https://www.w3.org/standards/webdesign/htmlcss
