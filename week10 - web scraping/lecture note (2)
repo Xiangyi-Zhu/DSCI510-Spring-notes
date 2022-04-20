@@ -1,1 +1,59 @@
+1. html file example: document object model (DOM) (a tree)
+<html>
+  <head>
+    <title>My title</title> #shows up in browser, put some metadata here
+  </head>
+  <body> #show in the page 
+    <h1>A heading</h1>
+    <a href=“https://www.usc.edu”>Link test</a> #tag a for anchor, url: uniform resource locator 
+  </body>
+</html>
 
+Browser view:
+A heading
+link test
+
+2. Common HTML tags:
+(1)Document
+<html> Creates an HTML document
+<head> Sets off the title & other info that isn't displayed
+<body> Sets off the visible portion of the document
+<title> Puts name of the document in the title bar; when bookmarking pages, this is what is bookmarked
+
+(2) Structure
+<h1> ... <h6> : Headings -- H1=largest, H6=smallest
+<p> Creates a new paragraph
+<div> Used to format block content with CSS
+<span> Used to format inline content with CSS
+<br> Inserts a line break
+
+(3) Lists
+<ul> Creates an unordered list
+<ol> Creates an ordered list
+<li> each list item
+
+(4) Links
+<a href="URL">clickable text</a> Creates a hyperlink to a Uniform Resource Locator
+<a href="mailto:EMAIL_ADDRESS">clickable text</a> Creates a hyperlink to an email address
+<a name="NAME"> Creates a target location within a document
+<a href="#NAME">clickable text</a> Creates a link to that target location
+
+3. HTML table example:
+<tr> table row
+<th> table header
+<td> table data
+
+<html>
+  <body>
+    <table cellpadding="3">
+      <tr><th>Country</th><th>Capital</th><th>Population</th></tr>
+      <tr><td>France</td><td>Paris</td><td>67000000</td></tr>
+      <tr><td>Germany</td><td>Berlin</td><td>83000000</td></tr>
+      <tr><td>Spain</td><td>Madrid</td><td>47000000</td></tr>
+    </table>
+  </body>
+</html>
+
+https://www.w3schools.com/html/
+https://www.w3.org/standards/webdesign/
+https://www.w3.org/Style/Examples/011/firstcss
