@@ -41,4 +41,29 @@ HTML document to the browser
 
 7. We can make a HTTP request and http is a protocol
 
-8. 
+8. About characters and strings
+ASCII is one of the encoding systems for strings
+Standard ASCII represents 128 characters including spacial characters and capital and lower case letters
+Extension ASCII can contain most of European characters
+
+9. Representing simple strings
+Each character is stored in 8 bits = byte of memory
+The ord() function tells us the numeric value of a simple ASCII character
+print(ord('H'))
+72
+UTF-8 is recommended practice for encoding data to be exchanged between systems
+
+10. Python Strings to Bytes
+When we talk to an external resource like a network socket we send bytes,
+so we need to encode Python 3 strings into a given character encoding
+
+When we read data from an external resource (web), we must decode it based on
+the character set so it is properly represented in Python 3 as a string
+
+11. Python Data Type: bytes
+• A bit is a binary digit that can be “0” or “1”.
+• A byte is a unit of digital information with 8 bits.
+• It can represent 2⁸ = 256 different values.
+
+12. 
+
