@@ -4,3 +4,5 @@
 import socket
 import urllib.request, urllib.parse, urllib.error
 (4) Introduce html and CSS
+(5) web scraping: beautiful soup
+
