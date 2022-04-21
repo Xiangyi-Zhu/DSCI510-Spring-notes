@@ -1,0 +1,47 @@
+1. Parsing HTML
+(a.k.a. Web Scraping)
+retrieves web pages, looks at those web pages, extracts information, and then looks at more web pages
+
+Search engines scrape web pages - we call this “spidering the web” or “web crawling
+Search engines like Google, what they do all the time is just literally call all the millions and billions of 
+webpages and gather data, and then they will index it and process it in a big index so that when you call Google, 
+you can actually find what you're looking for anyway.
+
+2. There is some controversy about web page scraping and some
+sites are a bit snippy about it.
+• Republishing copyrighted information is not allowed
+• Violating terms of service is not allowed
+
+3. Example: beautiful soup
+import urllib.request, urllib.parse, urllib.error
+from bs4 import BeautifulSoup
+url = input('Enter - ')
+html = urllib.request.urlopen(url).read()
+soup = BeautifulSoup(html, 'html.parser')
+# Retrieve all of the anchor tags
+tags = soup('a')
+for tag in tags:
+print(tag.get('href', None))
+
+• A library to extract information from html/xml strings
+• Maps (parse) an HTML string to a DOM (Document Object Model).
+• Then allows navigation inside that DOM
+
+4. Good BeautifulSoup Tutorial
+• https://www.pythonforbeginners.com/python-on-the-web/web-scraping-with-beautifulsoup
+• https://www.pythonforbeginners.com/beautifulsoup/beautifulsoup-4-python
+• https://www.pluralsight.com/guides/web-scraping-with-beautiful-soup
+
+ Also, the Beautiful Soup Documentation is very good
+
+5. requests package
+requests is a simple, yet elegant HTTP library.
+import requests
+r = requests.get('https://api.github.com/events')
+r.text
+If r.text is in HTML format, process it with e.g. BeautifulSoup.
+elif r.text is in JSON format, you can process it like this: r.json()
+Bonus: Text extracted by requests is already decoded, i.e. converted from
+UTF-8 (Python bytes) to Unicode (Python string)
+
+
