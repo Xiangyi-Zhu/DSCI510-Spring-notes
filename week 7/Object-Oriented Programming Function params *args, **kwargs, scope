@@ -2,4 +2,5 @@
 distinguish what is a class variable (global variable) and what is a instance variable
 object.method(args) == Class.method(object, args)
 
-2. 
+2. Object printing: __str__ vs __repr__
+object-printing.ipynb
