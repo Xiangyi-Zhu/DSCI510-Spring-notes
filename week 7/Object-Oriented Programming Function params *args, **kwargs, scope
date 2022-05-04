@@ -4,3 +4,8 @@ object.method(args) == Class.method(object, args)
 
 2. Object printing: __str__ vs __repr__
 object-printing.ipynb
+
+3. Dynamic Object Creation
+dynamic_object_creation.ipynb
+
+4. 
