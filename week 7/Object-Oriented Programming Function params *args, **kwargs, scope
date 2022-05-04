@@ -9,4 +9,22 @@ object-printing.ipynb
 dynamic_object_creation.ipynb
 
 4. Function Parameters
+function-parameters.ipynb
+week7-1_more_function_params.ipynb
 
+Function parameters and arguments
+Difference between arguments and parameters
+Positional and keyword arguments
+Default arguments
+Variable-length arguments (*args and **kwargs)
+Container unpacking into function arguments
+Local vs. global arguments
+Parameter passing (by value or by reference?)
+
+(1) sometimes people call parameters and arguments interchangeably, 
+but formally the parameter is what inside the function definition
+The argument is the value that you pass into the function. 
+(2) * / ** can be used to unpack the a list of arguments / keyword arguments
+
+5. Variable Scope
+variable_scope.ipynb
